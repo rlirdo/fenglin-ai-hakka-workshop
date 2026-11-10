@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>授課教師版｜AI 幫客語教學做教材</title>
+<meta name="description" content="鳳林國小附設幼兒園客語社群 AI 研習（2026/11/14）授課教師版：分鐘級流程、每節提醒、備案、問卷統計。">
+<style>
+:root{
+  --navy:#0B1F3A; --deep:#065A82; --teal:#1C7293; --green:#2E7D5B; --moss:#5FA98A; --gold:#C99A3E;
+  --bg:#F5F9FA; --card:#FFFFFF; --ink:#1E293B; --muted:#64748B; --line:#D5E2E8;
+  --tint:#E8F2F5; --gtint:#E7F3ED; --yellow:#FFF3B0; --blue:#0B3D91;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Microsoft JhengHei","微軟正黑體","PingFang TC","Noto Sans TC","Heiti TC",sans-serif;
+  font-size:17px;line-height:1.7}
+a{color:var(--teal)}
+header.top{background:var(--navy);color:#fff;padding:20px 16px 18px}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px}
+header.top .wrap{padding:0}
+.badge{display:inline-block;background:var(--gold);color:var(--navy);font-weight:700;font-size:16px;border-radius:999px;padding:2px 12px;margin:0 0 8px}
+h1{font-size:24px;line-height:1.4;margin:0 0 6px}
+.sub{color:#C9DDE6;font-size:16px;margin:0}
+.links{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+a.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--moss);color:#fff;text-decoration:none;
+  font-weight:700;border-radius:10px;padding:10px 16px;min-height:46px;font-size:17px}
+a.btn.alt{background:var(--teal)}
+nav.toc{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 6px rgba(11,31,58,.06)}
+nav.toc .wrap{display:flex;gap:6px;overflow-x:auto;padding:8px 12px;scrollbar-width:none}
+nav.toc .wrap::-webkit-scrollbar{display:none}
+nav.toc a{flex:0 0 auto;text-decoration:none;color:var(--navy);background:var(--tint);border-radius:999px;padding:8px 14px;font-size:16px;font-weight:700;white-space:nowrap}
+main{padding:10px 0 40px}
+section{scroll-margin-top:64px;padding-top:8px}
+.label{color:var(--teal);font-weight:700;font-size:16px;letter-spacing:.03em;margin:22px 0 0}
+h2{font-size:22px;color:var(--navy);margin:4px 0 8px;line-height:1.4}
+h3{font-size:18px;color:var(--navy);margin:0 0 6px;line-height:1.45}
+.lead{color:var(--muted);margin:0 0 10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:12px 0}
+.card.key{background:var(--yellow);border-color:#E9D77A;color:var(--blue)}
+.card.key h3{color:var(--blue)}
+.grid{display:grid;gap:12px}
+.grid>*{min-width:0}
+.stat{display:grid;grid-template-columns:auto 1fr auto;gap:6px 10px;align-items:center;font-size:16px}
+.stat .bar{height:16px;background:var(--tint);border-radius:999px;overflow:hidden}
+.stat .bar i{display:block;height:100%;background:var(--teal);border-radius:999px}
+.stat .v{font-weight:700;color:var(--navy);min-width:1.5em;text-align:right}
+.nums{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:8px 0}
+.num{background:var(--gtint);border-radius:12px;padding:10px;text-align:center}
+.num b{display:block;font-size:30px;color:var(--green);line-height:1.2}
+.num span{font-size:16px}
+ol.steps,ul.list{margin:6px 0 4px;padding-left:1.4em}
+ol.steps li,ul.list li{margin:4px 0}
+.tbl{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;min-width:600px;border-collapse:collapse;background:#fff;font-size:16px}
+#runsheet{min-width:860px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--tint);color:var(--navy)}
+tr.sec td{background:var(--navy);color:#fff;font-weight:700}
+tr.brk td{background:#F8FAFB;color:var(--muted)}
+td.t{white-space:nowrap;font-weight:700;color:var(--teal)}
+td.ck{text-align:center;width:44px}
+input[type=checkbox]{width:22px;height:22px;accent-color:var(--green);cursor:pointer}
+tr.done td{opacity:.55}
+tr.done td.ck{opacity:1}
+.say{color:var(--deep)}
+.trouble{display:grid;gap:10px}
+.trouble .card{margin:0}
+.trouble b{color:var(--navy)}
+.q{background:var(--gtint);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:6px 10px;margin:6px 0 0}
+label.row{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:8px 0;cursor:pointer}
+label.row input{margin-top:4px;flex:0 0 auto}
+.banner{background:var(--navy);color:#fff;font-weight:700;border-radius:12px;padding:12px 16px;margin:16px 0;text-align:center}
+.three{counter-reset:s;list-style:none;padding:0;margin:0}
+.three li{position:relative;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px 10px 58px;margin:8px 0;min-height:56px}
+.three li::before{counter-increment:s;content:counter(s);position:absolute;left:12px;top:50%;transform:translateY(-50%);
+  width:34px;height:34px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;display:flex;align-items:center;justify-content:center;line-height:1}
+.three.close li::before{background:var(--green)}
+.reset{appearance:none;border:1px solid var(--line);background:#fff;color:var(--muted);border-radius:10px;padding:8px 14px;font:inherit;font-size:16px;cursor:pointer;min-height:44px}
+footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36px;border-top:1px solid var(--line)}
+.qrs{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:0 0 14px}
+.qrs figure{margin:0;text-align:center}
+.qrs img{width:120px;height:120px;display:block;margin:0 auto 4px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px}
+.qrs figcaption{font-size:16px;color:var(--ink)}
+@media (min-width:720px){
+  h1{font-size:30px}
+  .grid.c2{grid-template-columns:1fr 1fr}
+  .grid.c3{grid-template-columns:1fr 1fr 1fr}
+  .nums{grid-template-columns:repeat(4,1fr)}
+  .trouble{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <span class="badge">授課教師版</span>
+    <h1>AI 幫客語教學做教材：講師流程與提醒</h1>
+    <p class="sub">講師：游豐兆　｜　2026/11/14（六）鳳林國小附設幼兒園 二樓電腦教室</p>
+    <div class="links">
+      <a class="btn" href="../index.html">學生實際操作版</a>
+      <a class="btn alt" href="../game/index.html">示範遊戲：小兔子上學去</a>
+    </div>
+  </div>
+</header>
+<nav class="toc" aria-label="目錄">
+  <div class="wrap">
+    <a href="#survey">① 問卷回饋</a>
+    <a href="#adjust">② 調整重點</a>
+    <a href="#flow">③ 分鐘級流程</a>
+    <a href="#tips">④ 每節提醒</a>
+    <a href="#backup">⑤ 備案</a>
+    <a href="#rules">⑥ 六原則與驗收</a>
+    <a href="#lines">⑦ 開場收尾三句話</a>
+    <a href="#after">⑧ 課後</a>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<section id="survey">
+  <p class="label">01 / SURVEY</p>
+  <h2>問卷回饋：四位老師都用過 AI，最想整理教案</h2>
+  <p class="lead">去識別化統計，僅供講師參考；不列任何個人資料。</p>
+  <div class="nums">
+    <div class="num"><b>4</b><span>位回覆（園主任 1、教保員 2、教師 1）</span></div>
+    <div class="num"><b>0</b><span>位沒用過 AI</span></div>
+    <div class="num"><b>0</b><span>位付費 Google AI</span></div>
+    <div class="num"><b>4／3</b><span>筆電／手機</span></div>
+  </div>
+  <div class="grid c2">
+    <div class="card">
+      <h3>用過的平台（人數，複選）</h3>
+      <div class="stat">
+        <span>Gemini</span><span class="bar"><i style="width:100%"></i></span><span class="v">4</span>
+        <span>ChatGPT</span><span class="bar"><i style="width:100%"></i></span><span class="v">4</span>
+        <span>Gemini Notebook</span><span class="bar"><i style="width:50%"></i></span><span class="v">2</span>
+        <span>Claude</span><span class="bar"><i style="width:50%"></i></span><span class="v">2</span>
+        <span>Canva AI</span><span class="bar"><i style="width:50%"></i></span><span class="v">2</span>
+        <span>Copilot</span><span class="bar"><i style="width:25%"></i></span><span class="v">1</span>
+        <span>Perplexity</span><span class="bar"><i style="width:25%"></i></span><span class="v">1</span>
+        <span>Grok</span><span class="bar"><i style="width:25%"></i></span><span class="v">1</span>
+        <span>Flow</span><span class="bar"><i style="width:25%"></i></span><span class="v">1</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>想要 AI 幫忙（人數，複選）</h3>
+      <div class="stat">
+        <span>整理教案</span><span class="bar"><i style="width:75%;background:var(--green)"></i></span><span class="v">3</span>
+        <span>客語情境圖</span><span class="bar"><i style="width:50%;background:var(--green)"></i></span><span class="v">2</span>
+        <span>親師溝通</span><span class="bar"><i style="width:50%;background:var(--green)"></i></span><span class="v">2</span>
+        <span>通知變語音</span><span class="bar"><i style="width:25%;background:var(--green)"></i></span><span class="v">1</span>
+        <span>園務行政</span><span class="bar"><i style="width:25%;background:var(--green)"></i></span><span class="v">1</span>
+        <span>教具步驟圖</span><span class="bar"><i style="width:25%;background:var(--green)"></i></span><span class="v">1</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>熟悉度</h3>
+      <div class="stat">
+        <span>從零開始</span><span class="bar"><i style="width:0"></i></span><span class="v">0</span>
+        <span>偶爾用</span><span class="bar"><i style="width:25%;background:var(--gold)"></i></span><span class="v">1</span>
+        <span>常用（做過圖或影片）</span><span class="bar"><i style="width:50%;background:var(--gold)"></i></span><span class="v">2</span>
+        <span>很熟</span><span class="bar"><i style="width:25%;background:var(--gold)"></i></span><span class="v">1</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>付費狀況與其他</h3>
+      <ul class="list">
+        <li>付費：ChatGPT Plus 1、Canva Pro 1、Claude 1、都沒付費 2；Google AI 付費 0。</li>
+        <li>設備：筆電 4、手機 3；場地二樓電腦教室。</li>
+        <li>建議：線上互動式遊戲活動。</li>
+        <li>提問：需要先準備哪些 AI？→ 只要 Google 帳號，不必付費。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card">
+    <h3>需求對照：問卷寫的每一件事，今天都會做一次</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>需求</th><th>哪一節</th><th>實作與提示詞</th><th>帶走什麼</th></tr></thead>
+      <tbody>
+        <tr><td>客語教學情境圖</td><td>第 1 節</td><td>統一實例：情境圖 → 對話修改 → 留白客語詞卡</td><td>情境圖、情境卡</td></tr>
+        <tr><td>幼兒教具步驟圖</td><td>第 2 節</td><td>四格步驟圖提示詞（紙盤兔子面具）</td><td>一張步驟圖</td></tr>
+        <tr><td>整理教案</td><td>第 3 節最前</td><td>客語教案小幫手（Gem）＋整理教案提示詞＋Gemini Notebook</td><td>一頁教案草稿</td></tr>
+        <tr><td>通知變語音</td><td>第 3 節</td><td>Gemini Notebook 語音摘要（給家長的自訂指示）</td><td>一段語音摘要</td></tr>
+        <tr><td>親師溝通</td><td>第 3 節</td><td>親師通知單提示詞＋LINE 短版接續句</td><td>長版通知＋短版</td></tr>
+        <tr><td>園務行政</td><td>第 3 節</td><td>會議紀錄變待辦表（講師假資料）＋Notebook 查規章</td><td>一張待辦表</td></tr>
+        <tr><td>線上互動式遊戲</td><td>第 3 節最後</td><td>Canvas 互動小遊戲＋示範遊戲</td><td>一個分享連結</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<section id="adjust">
+  <p class="label">02 / ADJUSTMENTS</p>
+  <h2>依問卷做的五個調整</h2>
+  <ol class="three">
+    <li><b>基礎快走</b>：沒有零基礎學員，第 1 節「認位置、貼提示詞」快速帶過，時間留給做教材。</li>
+    <li><b>影片改講師示範</b>：沒人付費 Google AI，影片我示範，有額度的老師跟做，不要求全員做出影片。</li>
+    <li><b>教案往前</b>：整理教案是最多人想要的，搬到第 3 節第一件事。</li>
+    <li><b>加教具步驟圖與互動小遊戲</b>：回應問卷的教具需求與「線上互動式遊戲」建議。</li>
+    <li><b>成品都給孩子用</b>：全程用六個設計原則檢核，親師通知與園務待辦表也各做一次。</li>
+  </ol>
+</section>
+
+<section id="flow">
+  <p class="label">03 / RUN SHEET</p>
+  <h2>分鐘級流程表（以 09:00 開始）</h2>
+  <p class="lead">完成一段就打勾；勾選存在這台裝置上（無法儲存時只在本次顯示）。</p>
+  <div class="tbl"><table id="runsheet">
+    <thead><tr><th>✓</th><th>時間</th><th>做什麼</th><th>講師一句話</th><th>學員產出</th><th>簡報段落</th></tr></thead>
+    <tbody>
+      <tr class="sec"><td colspan="6">第 1 節　統一實例快走（50 分）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f01" aria-label="完成"></td><td class="t">09:00–09:08</td><td>開場、問卷回饋、需求對照</td><td class="say">「四位老師都用過 AI，今天照大家的回覆調整過。」</td><td>—</td><td>封面、今天四節課、問卷回饋、需求對照表</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f02" aria-label="完成"></td><td class="t">09:08–09:12</td><td>準備確認、掃 QR 開學生版</td><td class="say">「只要一個 Google 帳號，不必付費。」</td><td>學生版已打開、Gemini 已登入</td><td>研習前準備、兩個網址</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f03" aria-label="完成"></td><td class="t">09:12–09:17</td><td>適齡六原則與安全守則</td><td class="say">「成品是給孩子用的：圖大字少、不扣分、老師唸客語。」</td><td>—</td><td>三段式學法、畫面交給 AI、四條安全守則、六個設計原則</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f04" aria-label="完成"></td><td class="t">09:17–09:40</td><td>情境圖 → 對話修改 → 留白詞卡</td><td class="say">「大家都用過 Gemini，這幾頁我們快速對一下位置。」</td><td>1 張情境圖、1 張客語情境卡</td><td>打開 Gemini～加上客語詞卡（操作 1–5）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f05" aria-label="完成"></td><td class="t">09:40–09:50</td><td>影片講師示範、第 1 節檢核</td><td class="say">「影片我來示範，有額度的老師可以跟做。」</td><td>影片看示範或跟做</td><td>把圖變影片（講師示範）、第一節檢核</td></tr>
+      <tr class="brk"><td></td><td class="t">09:50–10:00</td><td colspan="4">休息 10 分鐘</td></tr>
+      <tr class="sec"><td colspan="6">第 2 節　四旋鈕與教具步驟圖（50 分）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f06" aria-label="完成"></td><td class="t">10:00–10:20</td><td>四旋鈕：風格、動作、光影、鏡頭</td><td class="say">「一次只改一個字，其他一字不動。」</td><td>1 組前後對照</td><td>四個旋鈕、旋鈕一～四與實際對照、影片旋鈕</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f07" aria-label="完成"></td><td class="t">10:20–10:25</td><td>一圖三教材</td><td class="say">「一張圖可以變情境卡、詞卡、繪本頁。」</td><td>—</td><td>一張圖變三種教材</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f08" aria-label="完成"></td><td class="t">10:25–10:40</td><td>幼兒教具步驟圖（紙盤兔子面具）</td><td class="say">「四格、每格一個動作、只有數字。」</td><td>1 張教具步驟圖</td><td>幼兒教具步驟圖、步驟圖生成結果</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f09" aria-label="完成"></td><td class="t">10:40–10:50</td><td>練習：前後對照或自己班的步驟圖</td><td class="say">「做好的老師請舉手，我過去看。」</td><td>自選 1 件</td><td>練習</td></tr>
+      <tr class="brk"><td></td><td class="t">10:50–11:00</td><td colspan="4">休息 10 分鐘</td></tr>
+      <tr class="sec"><td colspan="6">第 3 節　整理教案到互動小遊戲（50 分）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f10" aria-label="完成"></td><td class="t">11:00–11:15</td><td>整理教案：客語教案小幫手（Gem）＋整理教案提示詞＋Gemini Notebook</td><td class="say">「第 3 節先做大家最想要的：整理教案。」</td><td>1 份教案草稿、1 本筆記本</td><td>第 3 節先做整理教案、Gems、整理教案提示詞、Gemini Notebook</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f11" aria-label="完成"></td><td class="t">11:15–11:22</td><td>通知變語音（語音摘要）</td><td class="say">「語音是華語，客語由老師錄。」</td><td>1 段語音摘要</td><td>親師溝通：語音總覽</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f12" aria-label="完成"></td><td class="t">11:22–11:28</td><td>親師通知單：長版＋LINE 短版</td><td class="say">「一則通知，長版給通知單、短版給 LINE。」</td><td>1 則通知（兩版）</td><td>親師溝通：一則通知兩個版本</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f13" aria-label="完成"></td><td class="t">11:28–11:34</td><td>園務行政：會議紀錄變待辦表（假資料）</td><td class="say">「負責人寫職稱，不寫姓名。」</td><td>1 張待辦表</td><td>行政應用、會議紀錄變待辦表</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f14" aria-label="完成"></td><td class="t">11:34–11:38</td><td>繪本（講師示範）</td><td class="say">「繪本朗讀是華語，關鍵詞由老師用客語帶讀。」</td><td>看示範</td><td>Gemini 繪本</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f15" aria-label="完成"></td><td class="t">11:38–11:50</td><td>互動小遊戲（Canvas）＋投影示範遊戲</td><td class="say">「圖卡夠大、答錯不扣分、沒有計時、沒有客語字。」</td><td>1 個互動小遊戲連結</td><td>Canvas 互動小遊戲、示範成品：小兔子上學去</td></tr>
+      <tr class="brk"><td></td><td class="t">11:50–12:00</td><td colspan="4">休息 10 分鐘</td></tr>
+      <tr class="sec"><td colspan="6">第 4 節　自由創作與發表（50 分）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f16" aria-label="完成"></td><td class="t">12:00–12:25</td><td>自由創作四條軌道（A 情境卡／B 分鏡／C 主題包／D 遊戲）</td><td class="say">「不確定就先選基礎軌，做完再升級。」</td><td>每人 1 件給幼兒用的作品</td><td>自由創作四條軌道、軌道 A～D</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f17" aria-label="完成"></td><td class="t">12:25–12:40</td><td>發表：每人 2 分鐘＋一讚美一建議</td><td class="say">「說一件你會帶回教室的事。」</td><td>每人 2 分鐘分享</td><td>發表</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f18" aria-label="完成"></td><td class="t">12:40–12:50</td><td>回教室檢核、資源與網址、收尾</td><td class="say">「回家照這張表檢查，再和孩子玩五分鐘。」</td><td>檢核清單</td><td>回教室檢核與資源、結尾</td></tr>
+    </tbody>
+  </table></div>
+  <p><button class="reset" type="button" id="resetRun">清除流程勾選</button></p>
+</section>
+
+<section id="tips">
+  <p class="label">04 / TROUBLESHOOTING</p>
+  <h2>每節講師提醒：常卡關處與處理句</h2>
+  <div class="trouble">
+    <div class="card"><h3>帳號登入（第 1 節開頭）</h3>
+      <p>登到別人的帳號、學校帳號沒開 Gemini、忘記密碼。</p>
+      <p class="q">「右上角頭像點開，確認是你自己的 Gmail；學校帳號不能用就換個人帳號。」</p></div>
+    <div class="card"><h3>額度用完（影片、圖片）</h3>
+      <p>出現「額度將於＿＿重設」。四位老師都沒有付費 Google AI，這是正常的。</p>
+      <p class="q">「額度用完不是你做錯，先看我投影，把圖和詞卡做好。」</p></div>
+    <div class="card"><h3>圖上出現文字（情境圖、步驟圖）</h3>
+      <p>AI 常自己加字或亂碼，違反「圖大字少」。</p>
+      <p class="q">「接著說：把圖上的文字全部拿掉，只留數字，其他都不要變。」</p></div>
+    <div class="card"><h3>角色不一致（分鏡、步驟圖）</h3>
+      <p>小兔子每張長得不一樣、衣服顏色跑掉。</p>
+      <p class="q">「在同一個對話接著做，並加一句：保持同一隻小兔子、同一種畫風。」</p></div>
+    <div class="card"><h3>Canvas 沒出現預覽（第 3 節小遊戲）</h3>
+      <p>只出現程式碼、或右邊空白。</p>
+      <p class="q">「確認有選 Canvas；接著說：請在 Canvas 顯示預覽。還不行就開新對話再貼一次。」</p></div>
+    <div class="card"><h3>客語字出現在畫面上</h3>
+      <p>AI 自己寫了客語字或拼音，未經審核。</p>
+      <p class="q">「客語交給老師：請它把客語改成（客語：老師填），畫面上不要放客語字。」</p></div>
+    <div class="card"><h3>Gem 找不到</h3>
+      <p>Gem 自 11/17 起改稱「技能」，介面可能變動。</p>
+      <p class="q">「直接開 gemini.google.com/gems/create；找不到就把指示貼在一般對話最前面。」</p></div>
+    <div class="card"><h3>想放真名或幼兒照片</h3>
+      <p>會議紀錄、通知單常有真名。</p>
+      <p class="q">「人名改職稱，幼兒用『幼兒甲』；照片一律不上傳。」</p></div>
+  </div>
+</section>
+
+<section id="backup">
+  <p class="label">05 / PLAN B</p>
+  <h2>備案</h2>
+  <div class="grid c3">
+    <div class="card"><h3>網路斷線</h3><ul class="list"><li>改看簡報截圖頁，口頭走流程。</li><li>學員改用手機網路開學生版，先抄好提示詞。</li><li>示範遊戲是單一檔案，預先在本機開好可離線投影。</li></ul></div>
+    <div class="card"><h3>額度用完</h3><ul class="list"><li>講師投影示範，學員照學生版網頁看步驟。</li><li>先完成不吃額度的文字任務：教案、通知單、待辦表。</li><li>影片一律列為「看示範或跟做」。</li></ul></div>
+    <div class="card"><h3>有人沒有 Google 帳號</h3><ul class="list"><li>改用講師投影＋學生版網頁照做。</li><li>和旁邊老師共用一台，輪流操作。</li><li>回家後註冊個人 Gmail 再做回家練習。</li></ul></div>
+  </div>
+</section>
+
+<section id="rules">
+  <p class="label">06 / SIX PRINCIPLES</p>
+  <h2>給幼兒用的六個設計原則與成品驗收表</h2>
+  <p class="lead">發表前，用這張表看每位老師的成品（勾選存在這台裝置上）。</p>
+  <label class="row"><input type="checkbox" data-k="r1"><span><b>1. 圖大字少</b>：孩子還不識字，畫面靠圖說話；文字只給老師看。</span></label>
+  <label class="row"><input type="checkbox" data-k="r2"><span><b>2. 一個畫面一個重點</b>：一張圖教一個詞或一個動作。</span></label>
+  <label class="row"><input type="checkbox" data-k="r3"><span><b>3. 柔和不驚嚇</b>：顏色柔和、角色可愛，沒有可怕、暴力或刻板印象。</span></label>
+  <label class="row"><input type="checkbox" data-k="r4"><span><b>4. 遊戲不扣分、不計時</b>：答錯可以再試，答對有鼓勵。</span></label>
+  <label class="row"><input type="checkbox" data-k="r5"><span><b>5. 螢幕時間短，老師帶著玩</b>：投影共玩或輪流點，一次五分鐘內。</span></label>
+  <label class="row"><input type="checkbox" data-k="r6"><span><b>6. 客語由老師唸</b>：AI 不出客語聲音，畫面上不放未審核的客語字。</span></label>
+  <label class="row"><input type="checkbox" data-k="r7"><span><b>標示與個資</b>：角落有「AI 生成，教師審核」；沒有幼兒照片、姓名或個資。</span></label>
+  <div class="banner">成品是給孩子用的：圖大字少、不扣分、老師唸客語</div>
+</section>
+
+<section id="lines">
+  <p class="label">07 / THREE LINES</p>
+  <h2>開場與收尾要說的三句話</h2>
+  <div class="grid c2">
+    <div class="card"><h3>開場</h3>
+      <ol class="three">
+        <li>「四位老師填了問卷，今天內容照大家的回覆調整過。」</li>
+        <li>「只要一個 Google 帳號，不必付費；提示詞都在學生版網頁一鍵複製。」</li>
+        <li>「畫面交給 AI，客語交給老師；每個成品都是給孩子用的。」</li>
+      </ol></div>
+    <div class="card"><h3>收尾</h3>
+      <ol class="three close">
+        <li>「今天帶回去的不是工具，是一套自己能改的方法。」</li>
+        <li>「回家前照六個原則檢查：圖大字少、不扣分、老師唸客語。」</li>
+        <li>「兩個網址都還在，回家練習三題，下次社群聚會帶來分享。」</li>
+      </ol></div>
+  </div>
+</section>
+
+<section id="after">
+  <p class="label">08 / AFTER CLASS</p>
+  <h2>課後：回家練習三題與蒐集作品</h2>
+  <div class="grid c2">
+    <div class="card"><h3>回家練習三題</h3>
+      <ol class="steps">
+        <li>用「客語教案小幫手」把一份自己的活動紀錄整理成一頁教案。</li>
+        <li>做一張自己班上要用的教具步驟圖（四格、只有數字）。</li>
+        <li>把小遊戲換成自己的主題，和孩子投影共玩五分鐘。</li>
+      </ol></div>
+    <div class="card"><h3>蒐集作品方式</h3>
+      <ul class="list">
+        <li>由園方建一個共用雲端資料夾，老師上傳成品圖、教案草稿或小遊戲分享連結。</li>
+        <li>檔名寫「主題＿作品類型」，不寫幼兒姓名，不放幼兒照片。</li>
+        <li>客語詞由社群老師審核後再用於教室。</li>
+        <li>下次社群聚會每人分享一件。</li>
+      </ul></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="qrs">
+    <figure><img src="../qr/qr_student.png" alt="學生實際操作版 QR code" width="120" height="120"><figcaption>學生實際操作版</figcaption></figure>
+    <figure><img src="../qr/qr_teacher.png" alt="授課教師版 QR code" width="120" height="120"><figcaption>授課教師版</figcaption></figure>
+    <figure><img src="../qr/qr_game.png" alt="示範遊戲 QR code" width="120" height="120"><figcaption>示範遊戲</figcaption></figure>
+  </div>
+  鳳林國小附設幼兒園 客語社群教師增能研習　2026/11/14<br>
+  講師：游豐兆（東華大學自然資源與環境學系 博士生）<br>
+  工具介面與功能以研習當天畫面為準
+</footer>
+
+<script>
+(function () {
+  var KEY = 'fenglin-teacher-v1';
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('input[type=checkbox][data-k]'));
+  function mark(b) { var tr = b.closest('tr'); if (tr) tr.classList.toggle('done', b.checked); }
+  boxes.forEach(function (b) {
+    b.checked = !!state[b.getAttribute('data-k')];
+    mark(b);
+    b.addEventListener('change', function () {
+      state[b.getAttribute('data-k')] = b.checked;
+      mark(b);
+      save();
+    });
+  });
+  document.getElementById('resetRun').addEventListener('click', function () {
+    boxes.forEach(function (b) {
+      if (b.closest('#runsheet')) { b.checked = false; state[b.getAttribute('data-k')] = false; mark(b); }
+    });
+    save();
+  });
+})();
+</script>
+</body>
+</html>
