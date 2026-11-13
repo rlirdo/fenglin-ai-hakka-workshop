@@ -177,7 +177,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <p class="lead">4 節 × 50 分鐘，中間休息 3 次。以 09:00 開始為例，依現場調整。</p>
   <ol class="timeline">
     <li><span class="time">09:00–09:50　第 1 節　統一實例快走</span>
-      <span class="mins">開場與打開學生版 5 分、教師使用 AI 的九個雷區 12 分、情境圖→修改→留白詞卡 20 分、客語專用工具 5 分、影片講師示範 8 分</span>
+      <span class="mins">開場與打開學生版 5 分、教師使用 AI 的九個雷區 12 分、情境圖→修改→留白詞卡 20 分、客語專用工具 5 分、影片講師示範 8 分；文字變客語語音 15 分（時間不夠挪到第 4 節自由創作）</span>
       <span class="hint">產出：1 張情境圖、1 張客語情境卡；影片看示範，有額度者跟做</span></li>
     <li class="break">09:50–10:00　休息 10 分鐘</li>
     <li><span class="time">10:00–10:50　第 2 節　四旋鈕與教具步驟圖</span>
@@ -262,6 +262,40 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">實測結果：恁早啊，細兔仔愛去學校上課。</span></div>
     <p class="hint">一般 AI（例如 Gemini）翻同一句得到「早安，細烏兔愛去學堂讀書。」，拼音和漢字還對不起來，所以不拿一般 AI 翻客語。Gohakka（gohakka.org）要註冊登入才能翻譯。查單詞用字可搜尋「教育部臺灣客語辭典」。</p>
     <p class="check">✓ 四個詞都查過　✓ 聽過發音　✓ 有人核對過</p>
+  </div>
+
+  <div class="card">
+    <h3>2-2. 把文字變成客語語音<span class="new">新增</span></h3>
+    <p class="hint">講師 11/13 實測。工具給的是草稿，用哪個字、哪個腔，請社群老師決定。</p>
+    <p><b>五條路</b>（工具｜腔調與聲音｜要不要登入｜實測）</p>
+    <ul class="list">
+      <li><b>客委會語音合成</b>｜四縣、海陸，各有男聲女聲｜不必登入（非會員每次 100 字）｜<b>已實測</b></li>
+      <li><b>臺灣客語語音合成系統</b>（Hugging Face）｜六腔、十多位語者、可調語速，會顯示斷詞和客語拼音｜不必登入｜<b>已實測</b></li>
+      <li><b>客語語音小幫手</b>（講師自製）｜用上一個系統合成：六腔、可選語者與語速｜不必登入，合成要網路｜<b>已實測</b></li>
+      <li><b>Gohakka 語音合成</b>｜網站說明為六腔｜要註冊登入（免費會員每日 20 字）｜<b>未實測</b></li>
+      <li><b>聲音複製型</b>｜要先上傳真人的參考音檔，再模仿那個聲音｜—｜<b>未實測、不建議</b>（會用到真人的聲音，需要本人同意）</li>
+    </ul>
+    <div class="row"><a class="btn" href="https://speech.hakka.gov.tw/TTS/Synthesis" target="_blank" rel="noopener">客委會語音合成</a></div>
+    <div class="row"><a class="btn" href="https://huggingface.co/spaces/united-link/taiwanese-hakka-tts" target="_blank" rel="noopener">臺灣客語語音合成系統（六腔）</a></div>
+    <div class="row"><a class="btn alt" href="https://gohakka.org/" target="_blank" rel="noopener">Gohakka（要登入，未實測）</a></div>
+    <p class="hint">臺灣客語語音合成系統為非商業授權（CC BY-NC 4.0）；使用 Gohakka 的語音須註明「語音來源：GoHakka.org」。</p>
+
+    <p><b>客語語音小幫手（講師自製）三步驟</b></p>
+    <ol class="steps">
+      <li>打華語句子，按按鈕開官方翻譯網頁，翻好再把客語漢字貼回來</li>
+      <li>選腔調，存成 mp3（旁邊會附一個來源說明檔）</li>
+      <li>客語錄音變文字（試用版，只抓大意，一定要校對）</li>
+    </ol>
+    <p class="hint">取得方式：研習當天向講師複製資料夾，整個放桌面，雙擊 exe。原始碼：<a href="https://github.com/rlirdo/fc-desktop-apps/tree/main/apps/hakka-voice" target="_blank" rel="noopener">github.com/rlirdo/fc-desktop-apps</a></p>
+
+    <p class="hint">練習句：這句是華語，貼到客委會即時翻譯，選四縣腔。</p>
+    <div class="prompt">明天請帶水壺和帽子。</div>
+    <div class="row"><button class="copy" type="button">複製</button><span class="hint">華語練習句</span></div>
+    <ul class="list">
+      <li>請勿輸入幼兒姓名或個資。</li>
+      <li>合成語音給老師備課練習、給家長參考；給孩子聽的，還是老師親口唸。</li>
+    </ul>
+    <p class="check">✓ 做出一個客語 mp3　✓ 對照過拼音　✓ 有人核對過用字</p>
   </div>
 
   <div class="card">

@@ -216,6 +216,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
       <tr><td class="ck"><input type="checkbox" data-k="f03" aria-label="完成"></td><td class="t">09:13–09:17</td><td>雷區 6–9：著作權、分享連結、帳號額度、改版與出錯</td><td class="say">「只要一個 Google 帳號，不必付費；出錯就按修正錯誤。」</td><td>—</td><td>雷區 6–9</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f04" aria-label="完成"></td><td class="t">09:17–09:37</td><td>情境圖 → 對話修改 → 留白詞卡</td><td class="say">「大家都用過 Gemini，這幾頁我們快速對一下位置。」</td><td>1 張情境圖、1 張客語情境卡</td><td>打開 Gemini～加上客語詞卡（操作 1–5）</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f04b" aria-label="完成"></td><td class="t">09:37–09:42</td><td>客語專用工具：客委會即時翻譯與語音合成</td><td class="say">「工具給的是草稿，用哪個字、哪個腔，請社群老師決定。」</td><td>詞卡上的客語詞查過、聽過、核對過</td><td>哪裡可以把文字變成客語（六頁）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f04c" aria-label="完成"></td><td class="t">約 15 分（彈性）</td><td>文字變客語語音＋客語語音小幫手<br>講師：展示五條路的表、示範 Hugging Face 臺灣客語語音合成系統、示範小幫手三個分頁<br>備案：時間不夠挪到第 4 節自由創作</td><td class="say">「合成語音給老師備課、給家長參考；給孩子聽的，還是老師親口唸。」</td><td>老師把一句班級通知變成客語 mp3（附來源說明檔）</td><td>把文字變成客語語音：五條路～跟著做（11 頁）</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f05" aria-label="完成"></td><td class="t">09:42–09:50</td><td>影片講師示範、第 1 節檢核</td><td class="say">「影片我來示範，有額度的老師可以跟做。」</td><td>影片看示範或跟做</td><td>把圖變影片（講師示範）、第一節檢核</td></tr>
       <tr class="brk"><td></td><td class="t">09:50–10:00</td><td colspan="4">休息 10 分鐘</td></tr>
       <tr class="sec"><td colspan="6">第 2 節　四旋鈕與教具步驟圖（50 分）</td></tr>
@@ -247,7 +248,24 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="trouble">
     <div class="card"><h3>老師想直接叫 Gemini 翻客語（第 1 節）</h3>
       <p>11/13 實測：Gemini 把「早安，小兔子要去學校上課。」翻成「早安，細烏兔愛去學堂讀書。」，拼音和漢字對不起來；客委會工具給的是「恁早啊，細兔仔愛去學校上課。」</p>
-      <p class="q">「客語請用客委會的客語語音資料庫查草稿、聽發音，一般 AI 不拿來翻客語；定稿請社群老師決定。」</p></div>
+      <p class="q">「客語請用客委會的客語語音資料庫查草稿、聽發音，一般 AI 不拿來翻客語；定稿請社群老師決定。」</p>
+      <p>11/13 下午以已登入 Gemini（Flash-Lite）重測同一句：「早安，細烏兔愛去學校讀書。」，仍保留「早安」、寫「細烏兔」，拼音寫法和客委會、臺灣客語語音合成系統都不一樣；結論不變：客語草稿用客語專用工具。</p></div>
+    <div class="card"><h3>藍色「Windows 已保護您的電腦」（客語語音小幫手）</h3>
+      <p>第一次雙擊 HakkaVoiceHelper.exe 時可能出現。</p>
+      <p class="q">「按『其他資訊』，再按『仍要執行』。」</p></div>
+    <div class="card"><h3>小幫手合成失敗</h3>
+      <p>示範服務休眠或沒有網路時，分頁 ② 合成不出來（合成要網路，辨識不用）。</p>
+      <p class="q">「改用客委會語音合成網頁（speech.hakka.gov.tw → 語音合成），貼上客語漢字就能聽、能下載。」</p></div>
+    <div class="card"><h3>分頁 ③ 說找不到模型</h3>
+      <p>models 資料夾沒有和 exe 放在一起。</p>
+      <p class="q">「整個資料夾一起複製到桌面，models 資料夾要和 exe 放在同一層。」</p></div>
+    <div class="card"><h3>為什麼小幫手不自動翻譯</h3>
+      <ul class="list">
+        <li>客委會：API 要先申請核准（學校可申請、非營利、每次三個月）；網站非會員每次 100 字、即時翻譯每日 1,000 字。</li>
+        <li>Gohakka：API 只在企業方案；免費會員每日 20 字；語音結果要標「語音來源：GoHakka.org」。</li>
+        <li>長問翻譯器：Beta，沒有公開 API。</li>
+      </ul>
+      <p class="q">「小幫手只幫你開官方網頁、複製、貼上，客語的用字和句法來自官方工具。」</p></div>
     <div class="card"><h3>Canvas 改遊戲後「發生錯誤」（第 3、4 節）</h3>
       <p>11/11 試跑實際遇到：請它換主題後，預覽空白並出現「發生錯誤，執行程式碼時發生問題」。原因是它只輸出片段程式碼。</p>
       <p class="q">「按下面的『修正錯誤』，等它重做一次。下次修改時加一句：請輸出完整的程式碼。」</p></div>
