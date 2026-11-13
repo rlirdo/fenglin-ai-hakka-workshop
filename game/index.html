@@ -57,6 +57,8 @@ body{margin:0;background:var(--bg);color:var(--ink);
 .corner{position:fixed;right:10px;bottom:8px;font-size:14px;color:var(--muted);z-index:7;background:rgba(255,248,236,.85);
   border-radius:8px;padding:2px 8px}
 .corner a{color:var(--muted)}
+.corner .decl{font-size:12px}
+.corner{text-align:right;max-width:calc(100vw - 20px)}
 @media (orientation:portrait){
   .cards{flex-direction:column}
   .card{--s:max(28vmin, min(62vw, 25vh))}
@@ -85,7 +87,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   <h1>全部完成，你好棒！</h1>
   <button class="again" id="again" type="button">再玩一次</button>
 </div>
-<div class="corner">AI 生成，教師審核｜客語由老師唸｜<a href="../index.html">回學生版</a></div>
+<div class="corner">AI 生成，教師審核｜客語由老師唸｜<a href="../index.html">回學生版</a><br><span class="decl">本文為原創文章，程式由 Claude Code 協作撰寫，內容由作者負責。</span></div>
 
 <script>
 (function () {
