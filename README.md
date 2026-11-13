@@ -36,8 +36,9 @@ QR：`qr/qr_student.png`、`qr/qr_teacher.png`、`qr/qr_game.png`（學生版頁
 
 ## 聲明
 
-本文為原創文章，程式由 Claude Code 協作撰寫，內容由作者負責。
+本文為原創文章，原始碼以 MIT License 公開；程式由 Claude Code 協作撰寫，內容由作者負責。
 
 - 三個網頁每頁最下方都有同一句聲明；示範遊戲另標示「AI 生成，教師審核」。
 - 研習簡報的示範圖片由 Gemini 生成；客語用字由社群老師審訂。
 - 講師：游豐兆（東華大學自然資源與環境學系 博士生）。
+- 授權：網頁原始碼採 MIT License（見 `LICENSE`）；使用或修改時請保留原作者標示。
