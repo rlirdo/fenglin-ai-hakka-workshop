@@ -17,6 +17,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"Microsoft JhengHei","微軟正黑體","PingFang TC","Noto Sans TC","Heiti TC",sans-serif;
   font-size:17px;line-height:1.7}
 a{color:var(--teal)}
+main a{overflow-wrap:anywhere;word-break:break-word}
 header.top{background:var(--navy);color:#fff;padding:20px 16px 18px}
 .wrap{max-width:960px;margin:0 auto;padding:0 16px}
 header.top .wrap{padding:0}
@@ -211,12 +212,12 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
     <thead><tr><th>✓</th><th>時間</th><th>做什麼</th><th>講師一句話</th><th>學員產出</th><th>簡報段落</th></tr></thead>
     <tbody>
       <tr class="sec"><td colspan="6">第 1 節　統一實例快走（50 分）</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f01" aria-label="完成"></td><td class="t">09:00–09:05</td><td>開場、今天流程、掃 QR 開學生版</td><td class="say">「四位老師填了問卷，今天照大家的回覆調整過；請先打開學生版。」</td><td>學生版已打開、Gemini 已登入</td><td>封面、今天四節課</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f01" aria-label="完成"></td><td class="t">09:00–09:05</td><td>開場、今天流程、掃 QR 開學生版（<a href="https://rlirdo.github.io/fenglin-ai-hakka-workshop/" target="_blank" rel="noopener">rlirdo.github.io/fenglin-ai-hakka-workshop</a>）</td><td class="say">「四位老師填了問卷，今天照大家的回覆調整過；請先打開學生版。」</td><td>學生版已打開、Gemini 已登入</td><td>封面、今天四節課</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f02" aria-label="完成"></td><td class="t">09:05–09:13</td><td>雷區 1–5：個資、標示與聲明、AI 會編故事、客語、適齡六原則</td><td class="say">「正式動手前先看地圖：AI 是備課助手，成品最後由老師負責。」</td><td>—</td><td>九個雷區總覽、雷區 1–5</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f03" aria-label="完成"></td><td class="t">09:13–09:17</td><td>雷區 6–9：著作權、分享連結、帳號額度、改版與出錯</td><td class="say">「只要一個 Google 帳號，不必付費；出錯就按修正錯誤。」</td><td>—</td><td>雷區 6–9</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f04" aria-label="完成"></td><td class="t">09:17–09:37</td><td>情境圖 → 對話修改 → 留白詞卡</td><td class="say">「大家都用過 Gemini，這幾頁我們快速對一下位置。」</td><td>1 張情境圖、1 張客語情境卡</td><td>打開 Gemini～加上客語詞卡（操作 1–5）</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f04b" aria-label="完成"></td><td class="t">09:37–09:42</td><td>客語專用工具：客委會即時翻譯與語音合成</td><td class="say">「工具給的是草稿，用哪個字、哪個腔，請社群老師決定。」</td><td>詞卡上的客語詞查過、聽過、核對過</td><td>哪裡可以把文字變成客語（六頁）</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f04c" aria-label="完成"></td><td class="t">約 15 分（彈性）</td><td>文字變客語語音＋客語語音小幫手<br>講師：展示五條路的表、示範 Hugging Face 臺灣客語語音合成系統、示範小幫手三個分頁<br>備案：時間不夠挪到第 4 節自由創作</td><td class="say">「合成語音給老師備課、給家長參考；給孩子聽的，還是老師親口唸。」</td><td>老師把一句班級通知變成客語 mp3（附來源說明檔）</td><td>把文字變成客語語音：五條路～跟著做（11 頁）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f04" aria-label="完成"></td><td class="t">09:17–09:37</td><td>Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）：情境圖 → 對話修改 → 留白詞卡</td><td class="say">「大家都用過 Gemini，這幾頁我們快速對一下位置。」</td><td>1 張情境圖、1 張客語情境卡</td><td>打開 Gemini～加上客語詞卡（操作 1–5）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f04b" aria-label="完成"></td><td class="t">09:37–09:42</td><td>客語專用工具：客委會即時翻譯（<a href="https://speech.hakka.gov.tw/Translation/Online" target="_blank" rel="noopener">speech.hakka.gov.tw/Translation/Online</a>）與語音合成（<a href="https://speech.hakka.gov.tw/TTS/Synthesis" target="_blank" rel="noopener">speech.hakka.gov.tw/TTS/Synthesis</a>）</td><td class="say">「工具給的是草稿，用哪個字、哪個腔，請社群老師決定。」</td><td>詞卡上的客語詞查過、聽過、核對過</td><td>哪裡可以把文字變成客語（六頁）</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f04c" aria-label="完成"></td><td class="t">約 15 分（彈性）</td><td>文字變客語語音＋客語語音小幫手<br>講師：展示五條路的表、示範 Hugging Face 臺灣客語語音合成系統（<a href="https://huggingface.co/spaces/united-link/taiwanese-hakka-tts" target="_blank" rel="noopener">huggingface.co/spaces/united-link/taiwanese-hakka-tts</a>）、示範小幫手三個分頁<br>備案：時間不夠挪到第 4 節自由創作</td><td class="say">「合成語音給老師備課、給家長參考；給孩子聽的，還是老師親口唸。」</td><td>老師把一句班級通知變成客語 mp3（附來源說明檔）</td><td>把文字變成客語語音：五條路～跟著做（11 頁）</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f05" aria-label="完成"></td><td class="t">09:42–09:50</td><td>影片講師示範、第 1 節檢核</td><td class="say">「影片我來示範，有額度的老師可以跟做。」</td><td>影片看示範或跟做</td><td>把圖變影片（講師示範）、第一節檢核</td></tr>
       <tr class="brk"><td></td><td class="t">09:50–10:00</td><td colspan="4">休息 10 分鐘</td></tr>
       <tr class="sec"><td colspan="6">第 2 節　四旋鈕與教具步驟圖（50 分）</td></tr>
@@ -226,12 +227,12 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
       <tr><td class="ck"><input type="checkbox" data-k="f09" aria-label="完成"></td><td class="t">10:40–10:50</td><td>練習：前後對照或自己班的步驟圖</td><td class="say">「做好的老師請舉手，我過去看。」</td><td>自選 1 件</td><td>練習</td></tr>
       <tr class="brk"><td></td><td class="t">10:50–11:00</td><td colspan="4">休息 10 分鐘</td></tr>
       <tr class="sec"><td colspan="6">第 3 節　整理教案到互動小遊戲（50 分）</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f10" aria-label="完成"></td><td class="t">11:00–11:15</td><td>整理教案：客語教案小幫手（Gem）＋整理教案提示詞＋Gemini Notebook</td><td class="say">「第 3 節先做大家最想要的：整理教案。」</td><td>1 份教案草稿、1 本筆記本</td><td>第 3 節先做整理教案、Gems、整理教案提示詞、Gemini Notebook</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f11" aria-label="完成"></td><td class="t">11:15–11:22</td><td>通知變語音（語音摘要）</td><td class="say">「語音是華語，客語由老師錄。」</td><td>1 段語音摘要</td><td>親師溝通：語音總覽</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f10" aria-label="完成"></td><td class="t">11:00–11:15</td><td>整理教案：客語教案小幫手（Gem，<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）＋整理教案提示詞＋Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>）</td><td class="say">「第 3 節先做大家最想要的：整理教案。」</td><td>1 份教案草稿、1 本筆記本</td><td>第 3 節先做整理教案、Gems、整理教案提示詞、Gemini Notebook</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f11" aria-label="完成"></td><td class="t">11:15–11:22</td><td>通知變語音（Gemini Notebook 語音摘要，<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>）</td><td class="say">「語音是華語，客語由老師錄。」</td><td>1 段語音摘要</td><td>親師溝通：語音總覽</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f12" aria-label="完成"></td><td class="t">11:22–11:28</td><td>親師通知單：長版＋LINE 短版</td><td class="say">「一則通知，長版給通知單、短版給 LINE。」</td><td>1 則通知（兩版）</td><td>親師溝通：一則通知兩個版本</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f13" aria-label="完成"></td><td class="t">11:28–11:34</td><td>園務行政：會議紀錄變待辦表（假資料）</td><td class="say">「負責人寫職稱，不寫姓名。」</td><td>1 張待辦表</td><td>行政應用、會議紀錄變待辦表</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f14" aria-label="完成"></td><td class="t">11:34–11:38</td><td>繪本（講師示範）</td><td class="say">「繪本朗讀是華語，關鍵詞由老師用客語帶讀。」</td><td>看示範</td><td>Gemini 繪本</td></tr>
-      <tr><td class="ck"><input type="checkbox" data-k="f15" aria-label="完成"></td><td class="t">11:38–11:50</td><td>互動小遊戲（Canvas）＋投影示範遊戲</td><td class="say">「圖卡夠大、答錯不扣分、沒有計時、沒有客語字。」</td><td>1 個互動小遊戲連結</td><td>Canvas 互動小遊戲、示範成品：小兔子上學去</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f14" aria-label="完成"></td><td class="t">11:34–11:38</td><td>繪本（<a href="https://gemini.google.com/gem/storybook" target="_blank" rel="noopener">gemini.google.com/gem/storybook</a>，講師示範）</td><td class="say">「繪本朗讀是華語，關鍵詞由老師用客語帶讀。」</td><td>看示範</td><td>Gemini 繪本</td></tr>
+      <tr><td class="ck"><input type="checkbox" data-k="f15" aria-label="完成"></td><td class="t">11:38–11:50</td><td>互動小遊戲（Canvas，<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）＋投影示範遊戲（<a href="https://rlirdo.github.io/fenglin-ai-hakka-workshop/game/" target="_blank" rel="noopener">rlirdo.github.io/fenglin-ai-hakka-workshop/game</a>）</td><td class="say">「圖卡夠大、答錯不扣分、沒有計時、沒有客語字。」</td><td>1 個互動小遊戲連結</td><td>Canvas 互動小遊戲、示範成品：小兔子上學去</td></tr>
       <tr class="brk"><td></td><td class="t">11:50–12:00</td><td colspan="4">休息 10 分鐘</td></tr>
       <tr class="sec"><td colspan="6">第 4 節　自由創作與發表（50 分）</td></tr>
       <tr><td class="ck"><input type="checkbox" data-k="f16" aria-label="完成"></td><td class="t">12:00–12:25</td><td>自由創作四條軌道（A 情境卡／B 分鏡／C 主題包／D 遊戲）</td><td class="say">「不確定就先選基礎軌，做完再升級。」</td><td>每人 1 件給幼兒用的作品</td><td>自由創作四條軌道、軌道 A～D</td></tr>
@@ -248,17 +249,17 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="trouble">
     <div class="card"><h3>老師想直接叫 Gemini 翻客語（第 1 節）</h3>
       <p>11/13 實測：Gemini 把「早安，小兔子要去學校上課。」翻成「早安，細烏兔愛去學堂讀書。」，拼音和漢字對不起來；客委會工具給的是「恁早啊，細兔仔愛去學校上課。」</p>
-      <p class="q">「客語請用客委會的客語語音資料庫查草稿、聽發音，一般 AI 不拿來翻客語；定稿請社群老師決定。」</p>
-      <p>11/13 下午以已登入 Gemini（Flash-Lite）重測同一句：「早安，細烏兔愛去學校讀書。」，仍保留「早安」、寫「細烏兔」，拼音寫法和客委會、臺灣客語語音合成系統都不一樣；結論不變：客語草稿用客語專用工具。</p></div>
+      <p class="q">「客語請用客委會的客語語音資料庫（<a href="https://speech.hakka.gov.tw" target="_blank" rel="noopener">speech.hakka.gov.tw</a>）查草稿、聽發音，一般 AI 不拿來翻客語；定稿請社群老師決定。」</p>
+      <p>11/13 下午以已登入 Gemini（Flash-Lite）重測同一句：「早安，細烏兔愛去學校讀書。」，仍保留「早安」、寫「細烏兔」，拼音寫法和客委會、臺灣客語語音合成系統（<a href="https://huggingface.co/spaces/united-link/taiwanese-hakka-tts" target="_blank" rel="noopener">huggingface.co/spaces/united-link/taiwanese-hakka-tts</a>）都不一樣；結論不變：客語草稿用客語專用工具。</p></div>
     <div class="card"><h3>藍色「Windows 已保護您的電腦」（客語語音小幫手）</h3>
       <p>第一次雙擊 HakkaVoiceHelper.exe 時可能出現。</p>
       <p class="q">「按『其他資訊』，再按『仍要執行』。」</p></div>
     <div class="card"><h3>小幫手合成失敗</h3>
       <p>示範服務休眠或沒有網路時，分頁 ② 合成不出來（合成要網路，辨識不用）。</p>
-      <p class="q">「改用客委會語音合成網頁（speech.hakka.gov.tw → 語音合成），貼上客語漢字就能聽、能下載。」</p></div>
+      <p class="q">「改用客委會語音合成網頁（<a href="https://speech.hakka.gov.tw/TTS/Synthesis" target="_blank" rel="noopener">speech.hakka.gov.tw/TTS/Synthesis</a>），貼上客語漢字就能聽、能下載。」</p></div>
     <div class="card"><h3>小幫手提醒「這個字語音可能唸錯」</h3>
       <p>把官方網頁的拼音也貼回小幫手，產生語音後會自動比對。講師實測五句：四句音節一致，「落雨吔，記得著水衣。」的「著」官方拼音 zogˋ、語音唸成 do31。</p>
-      <p class="q">「合成語音也會唸錯字。被提醒的那一句，改用客委會語音合成網頁；最後還是老師的耳朵決定。」</p></div>
+      <p class="q">「合成語音也會唸錯字。被提醒的那一句，改用客委會語音合成網頁（<a href="https://speech.hakka.gov.tw/TTS/Synthesis" target="_blank" rel="noopener">speech.hakka.gov.tw/TTS/Synthesis</a>）；最後還是老師的耳朵決定。」</p></div>
     <div class="card"><h3>客語字變成方框 □</h3>
       <p>少數客語用字（例如「𫣆」）一般電腦的字型沒有，會顯示成方框；字還在，不影響語音與存檔。</p>
       <p class="q">「方框是字型問題，不是打錯。照樣可以產生語音。」</p></div>
@@ -267,9 +268,9 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
       <p class="q">「整個資料夾一起複製到桌面，models 資料夾要和 exe 放在同一層。」</p></div>
     <div class="card"><h3>為什麼小幫手不自動翻譯</h3>
       <ul class="list">
-        <li>客委會：API 要先申請核准（學校可申請、非營利、每次三個月）；網站非會員每次 100 字、即時翻譯每日 1,000 字。</li>
-        <li>Gohakka：API 只在企業方案；免費會員每日 20 字；語音結果要標「語音來源：GoHakka.org」。</li>
-        <li>長問翻譯器：Beta，沒有公開 API。</li>
+        <li>客委會（<a href="https://speech.hakka.gov.tw" target="_blank" rel="noopener">speech.hakka.gov.tw</a>）：API 要先申請核准（學校可申請、非營利、每次三個月）；網站非會員每次 100 字、即時翻譯每日 1,000 字。</li>
+        <li>Gohakka（<a href="https://gohakka.org" target="_blank" rel="noopener">gohakka.org</a>）：API 只在企業方案；免費會員每日 20 字；語音結果要標「語音來源：GoHakka.org」。</li>
+        <li>長問翻譯器（<a href="https://translate.bronci.com.tw" target="_blank" rel="noopener">translate.bronci.com.tw</a>）：Beta，沒有公開 API。</li>
       </ul>
       <p class="q">「小幫手只幫你開官方網頁、複製、貼上，客語的用字和句法來自官方工具。」</p></div>
     <div class="card"><h3>Canvas 改遊戲後「發生錯誤」（第 3、4 節）</h3>
@@ -279,10 +280,10 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
       <p>11/11 試跑實際遇到：提示詞沒給地點與時段，AI 自己寫了「活動中心」「全天」，還有錯字「帶者」。</p>
       <p class="q">「AI 會把沒給的資訊自己補上。發出去之前，時間、地點、錯字一定要自己看一遍。」</p></div>
     <div class="card"><h3>下載原圖要等、語音下載會開新分頁</h3>
-      <p>按「下載原尺寸圖片」後要等十到二十秒，中途切換頁面會中斷。Gemini Notebook 的語音「下載」會另開分頁，瀏覽器若擋彈出視窗要先允許。</p>
+      <p>按「下載原尺寸圖片」後要等十到二十秒，中途切換頁面會中斷。Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>）的語音「下載」會另開分頁，瀏覽器若擋彈出視窗要先允許。</p>
       <p class="q">「按了下載先不要離開這一頁，看到檔案出現再繼續。」</p></div>
     <div class="card"><h3>帳號登入（第 1 節開頭）</h3>
-      <p>登到別人的帳號、學校帳號沒開 Gemini、忘記密碼。</p>
+      <p>登到別人的帳號、學校帳號沒開 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）、忘記密碼。</p>
       <p class="q">「右上角頭像點開，確認是你自己的 Gmail；學校帳號不能用就換個人帳號。」</p></div>
     <div class="card"><h3>額度用完（影片、圖片）</h3>
       <p>出現「額度將於＿＿重設」。四位老師都沒有付費 Google AI，這是正常的。</p>
@@ -300,7 +301,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
       <p>AI 自己寫了客語字或拼音，未經審核。</p>
       <p class="q">「客語交給老師：請它把客語改成（客語：老師填），畫面上不要放客語字。」</p></div>
     <div class="card"><h3>Gem 找不到</h3>
-      <p>Gem 自 11/17 起改稱「技能」，介面可能變動。</p>
+      <p>Gem（在 Gemini 裡，<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）自 11/17 起改稱「技能」，介面可能變動。</p>
       <p class="q">「直接開 gemini.google.com/gems/create；找不到就把指示貼在一般對話最前面。」</p></div>
     <div class="card"><h3>想放真名或幼兒照片</h3>
       <p>會議紀錄、通知單常有真名。</p>
@@ -312,7 +313,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <p class="label">05 / PLAN B</p>
   <h2>備案</h2>
   <div class="grid c3">
-    <div class="card"><h3>網路斷線</h3><ul class="list"><li>改看簡報截圖頁，口頭走流程。</li><li>學員改用手機網路開學生版，先抄好提示詞。</li><li>示範遊戲是單一檔案，預先在本機開好可離線投影。</li></ul></div>
+    <div class="card"><h3>網路斷線</h3><ul class="list"><li>改看簡報截圖頁，口頭走流程。</li><li>學員改用手機網路開學生版（<a href="https://rlirdo.github.io/fenglin-ai-hakka-workshop/" target="_blank" rel="noopener">rlirdo.github.io/fenglin-ai-hakka-workshop</a>），先抄好提示詞。</li><li>示範遊戲是單一檔案，預先在本機開好可離線投影。</li></ul></div>
     <div class="card"><h3>額度用完</h3><ul class="list"><li>講師投影示範，學員照學生版網頁看步驟。</li><li>先完成不吃額度的文字任務：教案、通知單、待辦表。</li><li>影片一律列為「看示範或跟做」。</li></ul></div>
     <div class="card"><h3>有人沒有 Google 帳號</h3><ul class="list"><li>改用講師投影＋學生版網頁照做。</li><li>和旁邊老師共用一台，輪流操作。</li><li>回家後註冊個人 Gmail 再做回家練習。</li></ul></div>
   </div>

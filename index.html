@@ -17,6 +17,7 @@ body{margin:0;background:var(--bg);color:var(--ink);
   font-family:"Microsoft JhengHei","微軟正黑體","PingFang TC","Noto Sans TC","Heiti TC",sans-serif;
   font-size:17px;line-height:1.7}
 a{color:var(--teal)}
+main a{overflow-wrap:anywhere;word-break:break-word}
 header.top{background:var(--navy);color:#fff;padding:20px 16px 18px}
 .wrap{max-width:860px;margin:0 auto;padding:0 16px}
 header.top .wrap{padding:0}
@@ -156,7 +157,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="prep">
     <div class="item"><span class="n">1</span><div><b>Google 帳號（Gmail）</b><br>記得帳號密碼，當天自己登入。免費帳號就能做完今天全部內容。</div></div>
     <div class="item"><span class="n">2</span><div><b>Chrome 瀏覽器</b><br>電腦教室或自己的筆電都可以，先登入同一個 Google 帳號。</div></div>
-    <div class="item"><span class="n">3</span><div><b>打得開兩個網站</b><br>gemini.google.com（做圖、教案、小遊戲）與 Gemini Notebook（原 NotebookLM，整理資料）。</div></div>
+    <div class="item"><span class="n">3</span><div><b>打得開兩個網站</b><br>Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>；做圖、教案、小遊戲）與 Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>；原 NotebookLM，整理資料）。</div></div>
     <div class="item"><span class="n">4</span><div><b>手機掃 QR</b><br>掃講師投影的 QR 打開這一頁，手機看步驟、電腦貼提示詞。</div></div>
     <div class="item"><span class="n">5</span><div><b>不必付費</b><br>影片額度有限是正常的，影片由講師示範。Canva 是選配，有帳號的老師可以拿來排版。</div></div>
   </div>
@@ -185,7 +186,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
       <span class="hint">產出：1 組前後對照、1 張教具步驟圖</span></li>
     <li class="break">10:50–11:00　休息 10 分鐘</li>
     <li><span class="time">11:00–11:50　第 3 節　整理教案與互動小遊戲</span>
-      <span class="mins">整理教案（客語教案小幫手＋Gemini Notebook）15 分、通知變語音 7 分、親師通知單 6 分、園務待辦表 6 分、繪本 4 分（講師示範）、互動小遊戲（Canvas）12 分</span>
+      <span class="mins">整理教案（客語教案小幫手＋Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>））15 分、通知變語音 7 分、親師通知單 6 分、園務待辦表 6 分、繪本（<a href="https://gemini.google.com/gem/storybook" target="_blank" rel="noopener">gemini.google.com/gem/storybook</a>）4 分（講師示範）、互動小遊戲（Canvas，<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）12 分</span>
       <span class="hint">產出：1 份教案草稿、1 則親師通知（長版＋LINE 短版）、1 張園務待辦表、1 個互動小遊戲</span></li>
     <li class="break">11:50–12:00　休息 10 分鐘</li>
     <li><span class="time">12:00–12:50　第 4 節　自由創作與發表</span>
@@ -220,7 +221,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card">
     <h3>1. 情境圖提示詞</h3>
-    <p class="hint">開新對話；按「＋」選「建立圖像」（以當天畫面為準）。</p>
+    <p class="hint">打開 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）開新對話；按「＋」選「建立圖像」（以當天畫面為準）。</p>
     <div class="prompt">一隻穿黃色雨衣的小兔子，騎著紅色腳踏車，經過鳳林的客家菸樓、禾埕和綠色稻田，要去幼兒園上學。兒童繪本插畫風格，色彩柔和明亮，早晨的陽光，橫式 16:9，畫面裡不要有文字。</div>
     <div class="row"><button class="copy" type="button">複製</button></div>
     <p class="check">✓ 小兔子、黃雨衣、紅腳踏車　✓ 看得到菸樓、禾埕或稻田　✓ 橫式畫面，圖上沒有文字</p>
@@ -260,7 +261,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
     <p class="hint">練習句（可複製貼到即時翻譯）：</p>
     <div class="prompt">早安，小兔子要去學校上課。</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">實測結果：恁早啊，細兔仔愛去學校上課。</span></div>
-    <p class="hint">一般 AI（例如 Gemini）翻同一句得到「早安，細烏兔愛去學堂讀書。」，拼音和漢字還對不起來，所以不拿一般 AI 翻客語。Gohakka（gohakka.org）要註冊登入才能翻譯。查單詞用字可搜尋「教育部臺灣客語辭典」。</p>
+    <p class="hint">一般 AI（例如 Gemini）翻同一句得到「早安，細烏兔愛去學堂讀書。」，拼音和漢字還對不起來，所以不拿一般 AI 翻客語。Gohakka（<a href="https://gohakka.org" target="_blank" rel="noopener">gohakka.org</a>）要註冊登入才能翻譯。查單詞用字可查「教育部臺灣客語辭典」（<a href="https://hakkadict.moe.edu.tw/" target="_blank" rel="noopener">hakkadict.moe.edu.tw</a>）。</p>
     <p class="check">✓ 四個詞都查過　✓ 聽過發音　✓ 有人核對過</p>
   </div>
 
@@ -288,7 +289,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
     </ol>
     <p class="hint">取得方式：研習當天向講師複製資料夾，整個放桌面，雙擊 exe。原始碼：<a href="https://github.com/rlirdo/fc-desktop-apps/tree/main/apps/hakka-voice" target="_blank" rel="noopener">github.com/rlirdo/fc-desktop-apps</a></p>
 
-    <p class="hint">練習句：這句是華語，貼到客委會即時翻譯，選四縣腔。</p>
+    <p class="hint">練習句：這句是華語，貼到客委會即時翻譯（<a href="https://speech.hakka.gov.tw/Translation/Online" target="_blank" rel="noopener">speech.hakka.gov.tw/Translation/Online</a>），選四縣腔。</p>
     <div class="prompt">明天請帶水壺和帽子。</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">華語練習句</span></div>
     <ul class="list">
@@ -301,7 +302,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card">
     <h3>3. 圖變影片提示詞<span class="new">講師示範</span></h3>
     <p class="hint"><b>講師示範，有額度的老師跟做。</b>其他老師先把情境圖和詞卡做好。</p>
-    <p class="hint">選影片功能 → 附上剛剛的圖 → 貼上提示詞送出。只描述「動」的部分。</p>
+    <p class="hint">在 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）選影片功能 → 附上剛剛的圖 → 貼上提示詞送出。只描述「動」的部分。</p>
     <div class="prompt">小兔子慢慢向前騎，風吹動稻田，鏡頭緩緩跟著小兔子移動，背景只有鳥叫聲和輕快的音樂，沒有人聲，8 秒。</div>
     <div class="row"><button class="copy" type="button">複製</button></div>
     <p class="check">✓ 小兔子有往前騎　✓ 稻田有被風吹動　✓ 沒有人聲，約八秒</p>
@@ -382,7 +383,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card">
     <h3>幼兒教具步驟圖：四格、每格一個動作、只有數字<span class="new">新</span></h3>
-    <p class="hint">開新對話，按「＋」選「建立圖像」，貼上送出。</p>
+    <p class="hint">打開 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）開新對話，按「＋」選「建立圖像」，貼上送出。</p>
     <div class="prompt">畫一張給幼兒看的四格步驟圖，教小朋友用紙盤做兔子面具。第一格：在紙盤上畫眼睛和鼻子。第二格：用色紙剪兩個長耳朵。第三格：把耳朵貼在紙盤上。第四格：小朋友戴上面具開心地笑。每一格左上角有大大的數字 1、2、3、4，除了數字不要有其他文字。兒童繪本插畫風格，線條簡單，顏色柔和，白色背景，橫式 16:9。</div>
     <div class="row"><button class="copy" type="button">複製</button></div>
     <p class="check">✓ 四格順序清楚　✓ 每格一個動作　✓ 只有數字，沒有字</p>
@@ -442,7 +443,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card">
     <h3>1. 整理教案（一）：建立「客語教案小幫手」Gem</h3>
-    <p class="hint">到 gemini.google.com/gems/create 新增 Gem → 名稱與指示貼上 → 儲存 → 開始對話。Gem 自 11/17 起改稱「技能」，位置以當天畫面為準。</p>
+    <p class="hint">到 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）新增 Gem（直接網址 gemini.google.com/gems/create）→ 名稱與指示貼上 → 儲存 → 開始對話。Gem 自 11/17 起改稱「技能」，位置以當天畫面為準。</p>
     <div class="prompt">客語教案小幫手</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">名稱</span></div>
     <div class="prompt">你是幼兒園客語教學的備課助手，對象三到六歲幼兒。
@@ -455,7 +456,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card key">
     <h3>2. 整理教案（二）：把活動紀錄整理成一頁教案</h3>
-    <p>貼給「客語教案小幫手」或一般 Gemini 對話，冒號後面接著貼你的活動紀錄（先刪掉幼兒姓名）。</p>
+    <p>貼給「客語教案小幫手」或一般 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）對話，冒號後面接著貼你的活動紀錄（先刪掉幼兒姓名）。</p>
     <div class="prompt">幫我把下面這份活動紀錄整理成一頁教案：活動名稱、適用年齡、活動目標三點、準備材料、流程（引起動機、發展活動、綜合活動，各寫時間）、觀察與評量重點。用華語寫，句子簡短。客語詞一律寫成「（客語：老師填）」。內容如下：</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">貼上後，接著貼活動紀錄</span></div>
     <p class="hint">沒有現成的活動紀錄？先用這段示範內容練習：</p>
@@ -466,7 +467,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card">
     <h3>3. Gemini Notebook：把教案和詞表放進同一本筆記本</h3>
     <ol class="steps">
-      <li>打開 Gemini Notebook（和 Gemini 同一個帳號）</li>
+      <li>打開 Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>），和 Gemini 同一個帳號</li>
       <li>新增筆記本，名稱：鳳林客家小鎮的早晨</li>
       <li>新增來源 → 複製的文字：貼上講師提供的客語詞表與童謠文字，或剛整理好的教案</li>
       <li>問一個問題（下面可複製），看回答後面的引用標號</li>
@@ -484,7 +485,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card">
     <h3>4. 通知變語音：給家長的語音摘要</h3>
     <ol class="steps">
-      <li>新增筆記本，貼上班級通知（先刪掉幼兒姓名與聯絡資料）</li>
+      <li>到 Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>）新增筆記本，貼上班級通知（先刪掉幼兒姓名與聯絡資料）</li>
       <li>先請它整理成家長版重點</li>
       <li>右邊工作室按「語音摘要」，自訂指示貼上下面第二段</li>
       <li>老師先聽一遍，確認正確再決定是否分享</li>
@@ -498,7 +499,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card">
     <h3>5. 親師溝通：一則通知，長版給通知單、短版給 LINE<span class="new">新</span></h3>
-    <p class="hint">開新的 Gemini 對話貼上送出。內容先去掉幼兒姓名。</p>
+    <p class="hint">開新的 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）對話貼上送出。內容先去掉幼兒姓名。</p>
     <div class="prompt">幫我寫一則給幼兒園家長的班級通知，語氣溫暖、句子簡短，三百字以內。活動：下週三客語日「小兔子上學去」。請分成四段：活動目的、時間與地點、請家長協助準備的東西（黃色雨衣或黃色衣服、水壺）、在家可以陪孩子練習的一句客語問候（寫成「（客語：老師填）」）。最後加一句感謝。不要出現任何幼兒姓名。</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">長版通知單</span></div>
     <div class="prompt">再幫我改成 LINE 群組用的短版，八十字以內，加上三個重點條列。</div>
@@ -508,7 +509,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card">
     <h3>6. 園務行政：會議紀錄變待辦表<span class="new">新</span></h3>
-    <p class="hint">貼給 Gemini 或 Gemini Notebook。先複製提示詞貼上，再複製下面的示範假資料接在後面，一起送出。</p>
+    <p class="hint">貼給 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）或 Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>）。先複製提示詞貼上，再複製下面的示範假資料接在後面，一起送出。</p>
     <div class="prompt">把下面的園務會議紀錄整理成一張待辦表，欄位是：事項、負責人（用職稱，不要寫姓名）、期限、需要的資源、備註。再列出三個還沒決定、下次要討論的問題。用華語、句子簡短。會議紀錄如下：</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">提示詞</span></div>
     <div class="prompt">11 月園務會議：一、客語日訂在下週三上午，由教保員負責布置教室，主任聯絡家長。二、需要彩色列印情境卡二十張，列印費待確認。三、十二月戶外教學地點還沒決定，候選是菸樓文化聚落和林田山。四、新學期教具採購清單月底前交給主任。</div>
@@ -519,7 +520,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card">
     <h3>7. Gemini 繪本：十頁故事（講師示範）</h3>
-    <p class="hint">gemini.google.com/gem/storybook → 輸入故事要求 → 翻頁檢查適齡與錯字。</p>
+    <p class="hint">打開 Gemini 繪本（<a href="https://gemini.google.com/gem/storybook" target="_blank" rel="noopener">gemini.google.com/gem/storybook</a>）→ 輸入故事要求 → 翻頁檢查適齡與錯字。</p>
     <div class="prompt">小兔子在鳳林過早晨，十頁，給四歲幼兒，溫暖簡單。</div>
     <div class="row"><button class="copy" type="button">複製</button><span class="hint">繪本故事要求</span></div>
     <p class="hint">內建朗讀是華語，關鍵詞由老師用客語帶讀。</p>
@@ -527,7 +528,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
 
   <div class="card key">
     <h3>8. 互動小遊戲（Canvas）：小兔子上學去<span class="new">新</span></h3>
-    <p>開新對話 → 按「＋」或工具選單選「Canvas」→ 貼上送出 → 右邊出現預覽就能玩。</p>
+    <p>打開 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）開新對話 → 按「＋」或工具選單選「Canvas」→ 貼上送出 → 右邊出現預覽就能玩。</p>
     <div class="prompt">用 Canvas 做一個給四到六歲幼兒玩的網頁小遊戲，主題是「小兔子上學去」。玩法：畫面上方有一條小小的老師提示列，寫「老師請用客語說：兔子」；下面有三張很大的圖卡（用 emoji：兔子、房子、稻田、火車、學校、太陽輪流出題），小朋友點出老師說的那一張。答對出現星星和「好棒」，答錯只輕輕搖一下可以再試。不扣分、不計時、小朋友不需要認字。按鈕要很大、適合觸控，顏色柔和。六題做完顯示「全部完成，你好棒」和「再玩一次」。畫面上不要出現客語文字，也不要播放聲音，客語由老師唸。</div>
     <div class="row"><button class="copy" type="button">複製</button></div>
     <p class="check">✓ 圖卡夠大　✓ 答錯不扣分　✓ 沒有計時　✓ 沒有客語字</p>
@@ -546,7 +547,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card">
     <h3><span class="pill">A</span>基礎軌：換主角、換場景，做自己的客語情境卡</h3>
     <ol class="steps">
-      <li>回到第一節的對話，小兔子的圖還在</li>
+      <li>回到 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）第一節的對話，小兔子的圖還在</li>
       <li>主角換成班上喜歡的動物（虛構角色）</li>
       <li>場景換成社群正在教的單元，例如菜園、廟口</li>
       <li>再做一次留白標籤的情境卡，印出來由老師填客語</li>
@@ -560,7 +561,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
     <h3><span class="pill">B</span>進階軌：三張分鏡接成一支客語小故事影片</h3>
     <ol class="steps">
       <li>寫三句話的小故事：開始、中間、結尾</li>
-      <li>每句做一張圖，主角與風格固定</li>
+      <li>每句在 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）做一張圖，主角與風格固定</li>
       <li>有額度再轉影片，用 Google Vids 或剪輯 App 接起來</li>
       <li>老師用手機錄客語旁白</li>
     </ol>
@@ -572,9 +573,9 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card">
     <h3><span class="pill">C</span>挑戰軌：教案＋筆記本＋繪本，做完整客語主題包</h3>
     <ol class="steps">
-      <li>用「客語教案小幫手」寫一份自己主題的教案</li>
-      <li>放進 Gemini Notebook，請它整理三個活動</li>
-      <li>摘要帶回 Gemini，做成一本繪本</li>
+      <li>用 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）的「客語教案小幫手」寫一份自己主題的教案</li>
+      <li>放進 Gemini Notebook（<a href="https://notebook.google.com" target="_blank" rel="noopener">notebook.google.com</a>），請它整理三個活動</li>
+      <li>摘要帶回 Gemini，做成一本繪本（<a href="https://gemini.google.com/gem/storybook" target="_blank" rel="noopener">gemini.google.com/gem/storybook</a>）</li>
       <li>成果放進同一個雲端資料夾</li>
     </ol>
     <div class="prompt">根據這本筆記本的重點，幫我寫一個給四歲幼兒的十頁繪本故事大綱，主角是穿黃色雨衣的小兔子。</div>
@@ -585,7 +586,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card key">
     <h3><span class="pill">D</span>遊戲軌：做一個自己主題的客語點圖小遊戲</h3>
     <ol class="steps">
-      <li>回到第 3 節做好的 Canvas 小遊戲對話</li>
+      <li>回到第 3 節做好的 Canvas（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）小遊戲對話</li>
       <li>貼上下面這句，換主題、換六張圖卡</li>
       <li>照六個設計原則檢核：圖大、不扣分、不計時、沒有客語字</li>
       <li>按「分享」取得連結，投影和孩子共玩</li>
@@ -627,7 +628,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <label class="ck"><input type="checkbox"><span><b>客語</b>：用字與發音經老師或社群審核。</span></label>
 
   <h2 style="margin-top:24px">客語詞表（四縣腔草案）</h2>
-  <p class="lead">這是草案，用字與發音請社群老師審核；可查教育部臺灣客語辭典。AI 生成的客語只當草稿。</p>
+  <p class="lead">這是草案，用字與發音請社群老師審核；可查教育部臺灣客語辭典（<a href="https://hakkadict.moe.edu.tw/" target="_blank" rel="noopener">hakkadict.moe.edu.tw</a>）。AI 生成的客語只當草稿。</p>
   <table class="words">
     <thead><tr><th>客語詞</th><th>華語意思</th></tr></thead>
     <tbody>
@@ -643,7 +644,7 @@ footer{color:var(--muted);font-size:16px;text-align:center;padding:20px 16px 36p
   <div class="card">
     <h3>回家練習三題（下次社群聚會帶來分享）</h3>
     <ol class="steps">
-      <li>用「客語教案小幫手」把一份自己的活動紀錄整理成一頁教案。</li>
+      <li>用 Gemini（<a href="https://gemini.google.com" target="_blank" rel="noopener">gemini.google.com</a>）的「客語教案小幫手」把一份自己的活動紀錄整理成一頁教案。</li>
       <li>做一張自己班上要用的教具步驟圖（四格、只有數字）。</li>
       <li>把小遊戲換成自己的主題，和孩子投影共玩五分鐘。</li>
     </ol>
